@@ -1,0 +1,93 @@
+
+body {
+  background: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+.Heading{
+  border-bottom: 2px solid green;
+  text-align: center;
+  width: auto;
+}
+/* Card Styles */
+
+.card-sl {
+  border-radius: 8px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* .card-image  {
+  padding: 0;
+} */
+.card-body {
+  padding: 10px;
+  
+}
+
+.card-action {
+  position: relative;
+  float: right;
+  margin-top: -25px;
+  margin-right: 20px;
+  z-index: 2;
+  color: #e26d5c;
+  background: #fff;
+  border-radius: 100%;
+  padding: 15px;
+  font-size: 15px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-action:hover {
+  color: #fff;
+  background: #e26d5c;
+ 
+}
+
+.card-heading {
+  font-size: 18px;
+  font-weight: bold;
+  background: #fff;
+  padding: 7px 10px;
+}
+
+.card-text {
+  padding: 3px 10px;
+  background: #fff;
+  font-size: 14px;
+  color: #1d1d1d;
+}
+
+.trash {
+  cursor: pointer;
+}
+.card {
+  overflow: hidden;
+}
+.card-image {
+  transition: all 0.5s ease;
+ 
+}
+.card-image:hover {
+  transform: scale(1.1) rotate(1deg);
+  
+  
+}
+
+@media (max-width: 380px) {
+  .card-sl {
+    height: 100%;
+    width: 100%;
+  }
+  .card-image img {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 8px 8px 0px 0;
+  }
+  .card-sl {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}

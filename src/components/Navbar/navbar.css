@@ -1,0 +1,20 @@
+nav{
+    background-color: 	#C3404E;
+    color: white;
+}
+ul{
+    list-style-type:none;
+}
+span{
+    color: white;
+}
+form{
+    padding-right: 0%;
+    overflow: hidden;
+}
+
+@media (max-width: 390px){
+    .form-control{
+        width: 30%;
+    }
+}

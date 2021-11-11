@@ -1,0 +1,15 @@
+.section-first{
+    background-color: rgb(35, 173, 173);
+}
+
+img{
+    height:500px;
+    
+}
+
+@media (max-width:390px){
+    img{
+        height:300px;
+        
+    }
+}

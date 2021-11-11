@@ -1,0 +1,24 @@
+.services{
+    padding:3%;
+}
+.icons{
+    filter: brightness(0) invert(1);
+    height:95px;
+}
+p{
+   font-size: 20px;
+}
+.services{
+    background-color:#C3404E ;
+    color: white;
+}
+
+@media (max-width:390px) {
+    .icons{
+        height: 40px;
+    }
+    p{
+        font-size: 15px;
+    }
+
+}

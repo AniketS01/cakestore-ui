@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import CakesSection from './components/CakesSection/CakesSection'
+import Contact from './components/Contact/Contact'
+import CovidSafe from './components/CovidSafe'
+import Highlights from './components/HighlightsSection/Highlights'
+import Navbar from './components/Navbar/Navbar'
+import Annoucement from './components/offers/Annoucement'
+import Services from './components/Services/Services'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <Navbar/>
+    <Annoucement/>
+    <Highlights/>
+    <Services/>
+    <CakesSection/>
+    <CovidSafe/>
+    <Contact/>
+    </>
+  )
 }
 
-export default App;
+export default App
+
+
