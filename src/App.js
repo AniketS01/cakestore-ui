@@ -1,26 +1,30 @@
-import React from 'react'
-import CakesSection from './components/CakesSection/CakesSection'
-import Contact from './components/Contact/Contact'
-import CovidSafe from './components/CovidSafe'
-import Highlights from './components/HighlightsSection/Highlights'
-import Navbar from './components/Navbar/Navbar'
-import Annoucement from './components/offers/Annoucement'
-import Services from './components/Services/Services'
+import React from "react";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import CakesSection from "./components/CakesSection/CakesSection";
+import Contact from "./components/Contact/Contact";
+import CovidSafe from "./components/CovidSafe";
+import Highlights from "./components/HighlightsSection/Highlights";
+import Navbar from "./components/Navbar/Navbar";
+import Annoucement from "./components/offers/Annoucement";
+import Services from "./components/Services/Services";
+import Home from "./components/Home";
+import BirthdayCake from "./Pages/BirthdayCake";
+import OccasionalCakes from "./Pages/OccasionalCakes";
+import BestSellers from "./Pages/BestSellers";
 
 const App = () => {
   return (
     <>
-    <Navbar/>
-    <Annoucement/>
-    <Highlights/>
-    <Services/>
-    <CakesSection/>
-    <CovidSafe/>
-    <Contact/>
+      <Navbar/>
+        <Routes>
+          <Route exact path="/" element={<Home/>}/>
+          <Route path="/birthdaycakes" element={<BirthdayCake/>}/>
+          <Route path="/occasionalcakes" element={<OccasionalCakes/>}/>
+          <Route path="/bestsellers" element={<BestSellers/>}/>
+        </Routes>
+      
     </>
-  )
-}
+  );
+};
 
-export default App
-
-
+export default App;

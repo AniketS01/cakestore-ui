@@ -5,14 +5,10 @@ const Contact = () => {
   return (
     <div>
       <div className="mb-4 container">
-        <h2 className="h1-responsive font-weight-bold text-center mt-4">
+        <h1 className="h1-responsive font-weight-bold text-center mt-4 mb-4" style={{fontWeight:600}}>
           Contact us
-        </h2>
-        <p className="text-center w-responsive mx-auto mb-4">
-          Do you have any questions? Please do not hesitate to contact us
-          directly. Our team will come back to you within a matter of hours to
-          help you.
-        </p>
+        </h1>
+        
         <div className="row">
           <div className="col-md-9 mb-md-0 mb-5">
             <form
@@ -22,7 +18,7 @@ const Contact = () => {
               method="POST"
             >
               <div className="row">
-                <div className="col-md-6">
+                <div className="col-lg-6">
                   <div className="md-form mb-0">
                     <input
                       type="text"
@@ -36,7 +32,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6">
+                <div className="col-lg-6">
                   <div className="md-form mb-0">
                     <input
                       type="text"

@@ -75,7 +75,9 @@ a {
   
   
 }
-
+.occasional-link{
+  text-decoration: none;
+}
 @media (max-width: 380px) {
   .card-sl {
     height: 100%;

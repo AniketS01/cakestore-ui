@@ -1,13 +1,17 @@
 import React from "react";
 import { Cart, Person, Search } from "react-bootstrap-icons";
+import { NavLink } from "react-router-dom";
 import './navbar.css'
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light  d-flex ">
       <div className="container-fluid">
-        <a className="navbar-brand " href="/" style={{color:'white'}}>
+        
+        <NavLink className="navbar-brand" to="/" style={{color:'white'}}>
           CakeShop
-        </a>
+        </NavLink>
+        
+        
         <form className="d-flex ">
           <input
             className="form-control serach-area me-1"
@@ -30,8 +34,8 @@ const Navbar = () => {
               <a
                 className="nav-link "
                 aria-current="page"
-                href="#"
-                style={{ fontWeight: 400 }}
+                to="/"
+                style={{ fontWeight: 400 ,cursor:"pointer"}}
               >
                 <div className="">
                   <span
