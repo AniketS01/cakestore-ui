@@ -19,13 +19,11 @@ const OccasionalCakes = () => {
                     <h1 className="card-heading">Black Forest</h1>
                     <p className="card-text">Nice cake for birthday's</p>
                     <div
-                      className="card-text d-flex justify-content-between"
+                      className="card-text d-flex justify-content-between align-items-center"
                       style={{ fontWeight: 600 }}
                     >
                       Rs 200/-
-                      <span className="trash" style={{color:"black"}}>
-                        <BagPlusFill />
-                      </span>
+                      <button className="btn btn-sm btn-outline-danger">Buy</button>
                     </div>
                   </div>
                 </div>
