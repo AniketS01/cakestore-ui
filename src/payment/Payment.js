@@ -33,7 +33,7 @@ const payment = async (price) => {
       contact: "9921565101",
     },
     theme: {
-      color: "#686CFD",
+      color: "#C3404E",
     },
   };
   const rzpl = new window.Razorpay(options);

@@ -3,6 +3,7 @@ import { TrashFill, BagPlusFill } from "react-bootstrap-icons";
 import img from ".././components/img/cakeshow1.jpg";
 import { db } from "../firebase";
 import { payment } from "../payment/Payment";
+import './cards.css'
 
 const BestSellers = () => {
   const [DesignerCakes, setDesignerCakes] = useState([]);
@@ -51,7 +52,7 @@ const BestSellers = () => {
           <div className='col-lg-3 col-md-6 col-sm-6 '>
             <div className='card shadow  mb-5 bg-body rounded'>
               <img
-                className='img-fluid card-img-top card-image'
+                className='img-fluid card-img-top cardsize card-image '
                 src={cake.image}
               />
 

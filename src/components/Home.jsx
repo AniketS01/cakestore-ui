@@ -15,7 +15,6 @@ const Home = () => {
       <Highlights />
       <Services />
       <CakesSection />
-      <CovidSafe />
       <Contact />
     </>
   );

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { TrashFill, BagPlusFill } from 'react-bootstrap-icons';
 import img from '.././components/img/cakeshow3.jpg';
 import { db } from '../firebase';
-
+import './cards.css'
 const OccasionalCakes = () => {
   const [festivalCake, setFestivalCake] = useState([]);
 
@@ -49,7 +49,7 @@ const OccasionalCakes = () => {
           <div className="col-lg-3 col-md-6 col-sm-6 ">
             <div className="card shadow  mb-5 bg-body rounded">
               <img
-                className="img-fluid card-img-top card-image"
+                className="img-fluid card-img-top cardsize card-image"
                 src={cake.image}
               />
 
