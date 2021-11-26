@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { TrashFill, BagPlusFill } from 'react-bootstrap-icons';
-import img from '.././components/img/cakeshow3.jpg';
-import { db } from '../firebase';
-import './cards.css'
+import React, { useState, useEffect } from "react";
+import { TrashFill, BagPlusFill } from "react-bootstrap-icons";
+import img from ".././components/img/cakeshow3.jpg";
+import { db } from "../firebase";
+import { payment } from "../payment/Payment";
+import "./cards.css";
 const OccasionalCakes = () => {
   const [festivalCake, setFestivalCake] = useState([]);
 
   useEffect(() => {
-    db.collection('Cakes')
+    db.collection("Cakes")
       .get()
       .then((snapshot) => {
         const Dcake = [];
@@ -21,7 +22,7 @@ const OccasionalCakes = () => {
             description: doc.data().description,
             price: doc.data().price,
           };
-          if (data.category === 'Festival cake') {
+          if (data.category === "Festival cake") {
             Dcake.push(data);
           }
         });
@@ -35,8 +36,8 @@ const OccasionalCakes = () => {
         <h1
           className="text-center mt-3 m-4"
           style={{
-            backgroundColor: '#C3404E',
-            color: 'white',
+            backgroundColor: "#C3404E",
+            color: "white",
             fontFamily: "'Hurricane', cursive",
           }}
         >
@@ -61,8 +62,12 @@ const OccasionalCakes = () => {
                   style={{ fontWeight: 600 }}
                 >
                   Rs {cake.price}/-
-                  <button className="btn btn-sm btn-outline-danger" onClick={() => payment(cake.price)}
-                  >Buy</button>
+                  <button
+                    className="btn btn-sm btn-outline-danger"
+                    onClick={() => payment(cake.price)}
+                  >
+                    Buy
+                  </button>
                 </div>
               </div>
             </div>
