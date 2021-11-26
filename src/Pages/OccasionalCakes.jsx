@@ -61,7 +61,8 @@ const OccasionalCakes = () => {
                   style={{ fontWeight: 600 }}
                 >
                   Rs {cake.price}/-
-                  <button className="btn btn-sm btn-outline-danger">Buy</button>
+                  <button className="btn btn-sm btn-outline-danger" onClick={() => payment(cake.price)}
+                  >Buy</button>
                 </div>
               </div>
             </div>
