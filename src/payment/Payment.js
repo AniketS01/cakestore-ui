@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const payment = async (price) => {
+const payment = async (price, cake) => {
   const response = await axios.post("http://localhost:5000/payment", {
     price: price,
   });
@@ -10,7 +10,7 @@ const payment = async (price) => {
     name: "Cake",
     description: "thanks for ordering",
     order_id: data.id,
-    handler: async (res) => {
+    handler: async (response) => {
       try {
         const paymentId = response.razorpay_payment_id;
         const url = `http://localhost:5000/capture/${paymentId}`;
@@ -19,7 +19,14 @@ const payment = async (price) => {
         });
         const success = JSON.parse(captureRes.data);
         if (success.captured) {
-          console.log("success");
+          const { data } = await axios.post("http://localhost:5000/pdf", {
+            cake: cake,
+            price: parseInt(price),
+          });
+          var a = document.createElement("a"); //Create <a>
+          a.href = "data:application/pdf;base64," + data; //Image Base64 Goes here
+          a.download = "invoice.pdf"; //File name Here
+          a.click();
         } else {
           console.log("failed");
         }

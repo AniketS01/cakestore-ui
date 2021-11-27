@@ -1,9 +1,10 @@
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { TrashFill, BagPlusFill } from "react-bootstrap-icons";
 import img from ".././components/img/cakeshow1.jpg";
 import { db } from "../firebase";
 import { payment } from "../payment/Payment";
-import './cards.css'
+import "./cards.css";
 
 const BestSellers = () => {
   const [DesignerCakes, setDesignerCakes] = useState([]);
@@ -31,6 +32,14 @@ const BestSellers = () => {
       });
     console.log(DesignerCakes);
   }, []);
+
+  const downloadPDF = async () => {
+    const { data } = await axios.get("http://localhost:5000/pdf");
+    var a = document.createElement("a"); //Create <a>
+    a.href = "data:application/pdf;base64," + data; //Image Base64 Goes here
+    a.download = "invoice.pdf"; //File name Here
+    a.click();
+  };
 
   return (
     <>
@@ -66,7 +75,7 @@ const BestSellers = () => {
                   Rs {cake.price}/-
                   <button
                     className='btn btn-sm btn-outline-danger'
-                    onClick={() => payment(cake.price)}
+                    onClick={() => payment(cake.price, cake.name)}
                   >
                     Buy
                   </button>
@@ -75,6 +84,9 @@ const BestSellers = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div>
+        <button onClick={downloadPDF}>Download</button>
       </div>
     </>
   );
