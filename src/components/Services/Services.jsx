@@ -12,15 +12,15 @@ const Services = () => {
                 <div className="d-flex justify-content-around align-items-center">
                     <span className="d-flex flex-column justify-content-around align-items-center">
                         <img src={img1} alt=""  className="icons"/>
-                        <p>Cakes</p>
+                        <p style={{color:"white"}}>Cakes</p>
                     </span>
                     <span className="d-flex flex-column justify-content-around align-items-center">
                         <img src={img2} alt=""  className="icons"/>
-                        <p>Fast Delivery</p>
+                        <p style={{color:"white"}}>Takeaway</p>
                     </span>
                     <span className="d-flex flex-column justify-content-around align-items-center">
                         <img src={img3} alt=""  className="icons"/>
-                        <p>Contact Anytime</p>
+                        <p style={{color:"white"}}>Contact Anytime</p>
                     </span>
 
                     

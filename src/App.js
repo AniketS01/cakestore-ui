@@ -1,12 +1,6 @@
 import React from "react";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
-import CakesSection from "./components/CakesSection/CakesSection";
-import Contact from "./components/Contact/Contact";
-import CovidSafe from "./components/CovidSafe";
-import Highlights from "./components/HighlightsSection/Highlights";
 import Navbar from "./components/Navbar/Navbar";
-import Annoucement from "./components/offers/Annoucement";
-import Services from "./components/Services/Services";
 import Home from "./components/Home";
 import BirthdayCake from "./Pages/BirthdayCake";
 import OccasionalCakes from "./Pages/OccasionalCakes";

@@ -1,7 +1,5 @@
 import axios from "axios";
 import React, { useState, useEffect, useRef } from "react";
-import { TrashFill, BagPlusFill } from "react-bootstrap-icons";
-import img from ".././components/img/cakeshow1.jpg";
 import { db } from "../firebase";
 import { payment } from "../payment/Payment";
 import "./cards.css";
@@ -47,16 +45,16 @@ const BestSellers = () => {
   return (
     <>
       <div>
-        <h1
+        <h3
           className='text-center mt-3 m-4'
           style={{
             backgroundColor: "#C3404E",
             color: "white",
-            fontFamily: "'Hurricane', cursive",
+            fontFamily: "'urbanist', sans-serif",
           }}
         >
           Best Sellers
-        </h1>
+        </h3>
       </div>
 
       <div className='row container '>

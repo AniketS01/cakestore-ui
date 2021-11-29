@@ -94,18 +94,18 @@ const Contact = () => {
             <ul className="list-unstyled mb-0">
               <li>
                   <i><Map/></i>
-                <p style={{color:"black"}} >Jalgaon, India</p>
+                <p style={{color:"black"}} >Nashik, India</p>
               </li>
 
               <li>
                 <i><Phone/></i>
-                <p style={{color:"black"}}>+91 85548454156</p>
+                <p style={{color:"black"}}>+91 7776862518</p>
               </li>
 
               <li>
                   <i><Mailbox/></i>
                 
-                <p style={{color:"black"}}>xyz@gmail.com</p>
+                <p style={{color:"black"}}>mayurgorane19@gmail.com</p>
               </li>
             </ul>
           </div>

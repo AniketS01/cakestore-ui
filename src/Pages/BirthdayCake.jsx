@@ -1,9 +1,8 @@
 import React, { useEffect, useState ,useRef} from "react";
-import { TrashFill, BagPlusFill } from "react-bootstrap-icons";
-import img from ".././components/img/cakeshow2.jpg";
 import { db } from "../firebase";
 import { payment } from "../payment/Payment";
 import "./cards.css";
+import axios from "axios";
 const BirthdayCake = () => {
   const [BirthdayCake, setBirthdayCake] = useState([]);
   const nameRef = useRef()
@@ -33,19 +32,27 @@ const BirthdayCake = () => {
       });
   }, []);
 
+  const downloadPDF = async () => {
+    const { data } = await axios.get("http://localhost:5000/pdf");
+    var a = document.createElement("a"); //Create <a>
+    a.href = "data:application/pdf;base64," + data; //Image Base64 Goes here
+    a.download = "invoice.pdf"; //File name Here
+    a.click();
+  };
+
   return (
     <>
       <div>
-        <h1
+        <h3
           className='text-center mt-3 m-4'
           style={{
             backgroundColor: "#C3404E",
             color: "white",
-            fontFamily: "'Hurricane', cursive",
+            fontFamily: "'urbanist', sans-serif",
           }}
         >
           Birthday Cakes
-        </h1>
+        </h3>
       </div>
 
       <div className='row container '>
@@ -151,7 +158,15 @@ const BirthdayCake = () => {
                           <button
                             type="button"
                             className="btn btn-danger"
-                            onClick={() => payment(cake.price, cake.name)}
+                            onClick={() =>
+                              payment(
+                                cake.price,
+                                cake.name,
+                                nameRef.current.value,
+                                emailRef.current.value,
+                                phoneRef.current.value
+                              )
+                            }
                           >
                             Make Payment
                           </button>
