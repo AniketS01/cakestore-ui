@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const payment = async (price, cake) => {
+const payment = async (price, cake, name, email, phone) => {
   const response = await axios.post("http://localhost:5000/payment", {
     price: price,
   });
@@ -20,6 +20,9 @@ const payment = async (price, cake) => {
         const success = JSON.parse(captureRes.data);
         if (success.captured) {
           const { data } = await axios.post("http://localhost:5000/pdf", {
+            name: name,
+            email: email,
+            phone: phone,
             cake: cake,
             price: parseInt(price),
           });
