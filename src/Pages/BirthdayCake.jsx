@@ -4,6 +4,7 @@ import { payment } from "../payment/Payment";
 import "./cards.css";
 import axios from "axios";
 const BirthdayCake = () => {
+  const paynow = false;
   const [BirthdayCake, setBirthdayCake] = useState([]);
   const nameRef = useRef()
   const emailRef = useRef()
@@ -33,7 +34,7 @@ const BirthdayCake = () => {
   }, []);
 
   const downloadPDF = async () => {
-    const { data } = await axios.get("http://localhost:5000/pdf");
+    const { data } = await axios.get("https://virashmani.herokuapp.com/pdf");
     var a = document.createElement("a"); //Create <a>
     a.href = "data:application/pdf;base64," + data; //Image Base64 Goes here
     a.download = "invoice.pdf"; //File name Here
@@ -163,7 +164,8 @@ const BirthdayCake = () => {
                                 cake.name,
                                 nameRef.current.value,
                                 emailRef.current.value,
-                                phoneRef.current.value
+                                phoneRef.current.value,
+                                false
                               )
                             }
                           >
@@ -178,11 +180,12 @@ const BirthdayCake = () => {
                                 cake.name,
                                 nameRef.current.value,
                                 emailRef.current.value,
-                                phoneRef.current.value
+                                phoneRef.current.value,
+                                true
                               )
                             }
                           >
-                            Make Payment
+                            Pay Now
                           </button>
                         </div>
                       </div>

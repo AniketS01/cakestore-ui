@@ -3,7 +3,7 @@ import Annoucement from "./offers/Annoucement";
 import Highlights from "./HighlightsSection/Highlights";
 import Services from "./Services/Services";
 import CakesSection from "./CakesSection/CakesSection";
-import Contact from "./Contact/Contact";
+
 import Footer from "./footer/Footer";
 
 
@@ -14,7 +14,7 @@ const Home = () => {
       <Highlights />
       <Services />
       <CakesSection />
-      <Contact />
+      
       <Footer/>
     </>
   );

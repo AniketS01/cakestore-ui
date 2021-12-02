@@ -34,7 +34,7 @@ const BestSellers = () => {
   }, []);
 
   const downloadPDF = async () => {
-    const { data } = await axios.get("http://localhost:5000/pdf");
+    const { data } = await axios.get("https://virashmani.herokuapp.com/pdf");
     var a = document.createElement("a"); //Create <a>
     a.href = "data:application/pdf;base64," + data; //Image Base64 Goes here
     a.download = "invoice.pdf"; //File name Here

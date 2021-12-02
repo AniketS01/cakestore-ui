@@ -3,9 +3,12 @@ import axios from "axios";
 const payment = async (price, cake, name, email, phone, paynow) => {
   console.log(paynow);
   if (paynow) {
-    const response = await axios.post("http://localhost:5000/payment", {
-      price: price,
-    });
+    const response = await axios.post(
+      "https://virashmani.herokuapp.com/payment",
+      {
+        price: price,
+      }
+    );
     const { data } = response;
     const options = {
       key: "rzp_test_t7PMlIj8PD3BeR",
@@ -15,20 +18,23 @@ const payment = async (price, cake, name, email, phone, paynow) => {
       handler: async (response) => {
         try {
           const paymentId = response.razorpay_payment_id;
-          const url = `http://localhost:5000/capture/${paymentId}`;
+          const url = `https://virashmani.herokuapp.com/capture/${paymentId}`;
           const captureRes = await axios.post(url, {
             price: price * 100,
           });
           const success = JSON.parse(captureRes.data);
           if (success.captured) {
-            const { data } = await axios.post("http://localhost:5000/pdf", {
-              name: name,
-              email: email,
-              phone: phone,
-              cake: cake,
-              price: parseInt(price),
-              paid: paynow,
-            });
+            const { data } = await axios.post(
+              "https://virashmani.herokuapp.com/pdf",
+              {
+                name: name,
+                email: email,
+                phone: phone,
+                cake: cake,
+                price: parseInt(price),
+                paid: paynow,
+              }
+            );
             var a = document.createElement("a"); //Create <a>
             a.href = "data:application/pdf;base64," + data; //Image Base64 Goes here
             a.download = "invoice.pdf"; //File name Here
@@ -52,7 +58,7 @@ const payment = async (price, cake, name, email, phone, paynow) => {
     const rzpl = new window.Razorpay(options);
     rzpl.open();
   } else {
-    const { data } = await axios.post("http://localhost:5000/pdf", {
+    const { data } = await axios.post("https://virashmani.herokuapp.com/pdf", {
       name: name,
       email: email,
       phone: phone,
