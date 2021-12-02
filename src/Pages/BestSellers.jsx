@@ -152,7 +152,7 @@ const BestSellers = () => {
                           </form>
                         </div>
                         <div className='modal-footer'>
-                          <button
+                        <button
                             type='button'
                             className='btn btn-danger'
                             onClick={() =>
@@ -161,11 +161,29 @@ const BestSellers = () => {
                                 cake.name,
                                 nameRef.current.value,
                                 emailRef.current.value,
-                                phoneRef.current.value
+                                phoneRef.current.value,
+                               
                               )
                             }
                           >
-                            Make Payment
+                            Pay During Pickup
+                          </button>
+                          <button
+                            type='button'
+                            className='btn btn-danger'
+                            onClick={() =>
+                              payment(
+                        
+                                cake.price,
+                                cake.name,
+                                nameRef.current.value,
+                                emailRef.current.value,
+                                phoneRef.current.value,
+                                
+                              )
+                            }
+                          >
+                            Pay Now
                           </button>
                         </div>
                       </div>

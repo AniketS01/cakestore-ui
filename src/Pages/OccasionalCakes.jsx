@@ -154,7 +154,21 @@ const OccasionalCakes = () => {
                           </form>
                         </div>
                         <div className="modal-footer">
-                          
+                        <button
+                            type='button'
+                            className='btn btn-danger'
+                            onClick={() =>
+                              payment(
+                                cake.price,
+                                cake.name,
+                                nameRef.current.value,
+                                emailRef.current.value,
+                                phoneRef.current.value
+                              )
+                            }
+                          >
+                            Pay During Pickup
+                          </button>
                           <button
                             type="button"
                             className="btn btn-danger"

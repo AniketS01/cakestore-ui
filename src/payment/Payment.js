@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const payment = async (price, cake, name, email, phone) => {
+const payment = async (price, cake, name, email, phone  ) => {
   const response = await axios.post("http://localhost:5000/payment", {
     price: price,
   });
