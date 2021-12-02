@@ -46,12 +46,12 @@ const BirthdayCake = () => {
         <h3
           className='text-center mt-3 m-4'
           style={{
-            backgroundColor: "#C3404E",
-            color: "white",
+            fontWeight:600,
+            borderBottom:"1px solid",
             fontFamily: "'urbanist', sans-serif",
           }}
         >
-          Birthday Cakes
+         B I R T H D A Y  &nbsp; C A K E S 
         </h3>
       </div>
 

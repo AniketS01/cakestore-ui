@@ -1,6 +1,8 @@
 import React from "react";
 import "./Highlights.css";
-import img1 from "../img/bannerup.jpg";
+import img1 from "../img/bannerup.jpg"
+import img2 from '../img/banner2.jpg';
+import img3 from '../img/cakebanner4.jpg';
 
 const Highlights = () => {
   return (
@@ -39,7 +41,11 @@ const Highlights = () => {
               <div className="carousel-caption d-none d-md-block"></div>
             </div>
             <div className="carousel-item">
-              <img src={img1} className="d-block w-100 " alt="..." />
+              <img src={img3} className="d-block w-100 " alt="..." />
+              <div className="carousel-caption d-none d-md-block"></div>
+            </div>
+            <div className="carousel-item">
+              <img src={img2} className="d-block w-100 " alt="..." />
               <div className="carousel-caption d-none d-md-block"></div>
             </div>
           </div>

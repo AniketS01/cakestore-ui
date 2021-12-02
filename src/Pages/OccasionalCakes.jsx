@@ -47,12 +47,12 @@ const OccasionalCakes = () => {
         <h3
           className='text-center mt-3 m-4'
           style={{
-            backgroundColor: "#C3404E",
-            color: "white",
+            fontWeight:600,
+            borderBottom:"1px solid",
             fontFamily: "'urbanist', sans-serif",
           }}
         >
-          Occasional Cakes
+          O C C A S I O N A L &nbsp;  C A K E S 
         </h3>
       </div>
 

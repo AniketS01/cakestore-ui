@@ -47,12 +47,12 @@ const BestSellers = () => {
         <h3
           className='text-center mt-3 m-4'
           style={{
-            backgroundColor: "#C3404E",
-            color: "white",
+            fontWeight:600,
+            borderBottom:"1px solid",
             fontFamily: "'urbanist', sans-serif",
           }}
         >
-          Best Sellers
+          B E S T &nbsp; S E L L E R S
         </h3>
       </div>
 
