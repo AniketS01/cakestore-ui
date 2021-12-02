@@ -4,7 +4,6 @@ import { payment } from "../payment/Payment";
 import "./cards.css";
 import axios from "axios";
 const BirthdayCake = () => {
-  const paynow = false;
   const [BirthdayCake, setBirthdayCake] = useState([]);
   const nameRef = useRef()
   const emailRef = useRef()
