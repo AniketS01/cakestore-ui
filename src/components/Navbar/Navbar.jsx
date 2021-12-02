@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className="container-fluid d-flex justify-content-center align-items-center ">
         
         <NavLink className="navbar-brand" to="/" style={{color:'white'}}>
-          Virashmani Cakes
+          VIRASHMANI &nbsp; CAKES
         </NavLink>
         
     
