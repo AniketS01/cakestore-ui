@@ -9,7 +9,6 @@ const BestSellers = () => {
   const nameRef = useRef();
   const emailRef = useRef();
   const phoneRef = useRef();
-
   useEffect(() => {
     db.collection("Cakes")
       .get()
@@ -152,36 +151,35 @@ const BestSellers = () => {
                           </form>
                         </div>
                         <div className='modal-footer'>
-                        <button
+                          <button
                             type='button'
                             className='btn btn-danger'
-                            onClick={() =>
+                            onClick={() => {
                               payment(
                                 cake.price,
                                 cake.name,
                                 nameRef.current.value,
                                 emailRef.current.value,
                                 phoneRef.current.value,
-                               
-                              )
-                            }
+                                false
+                              );
+                            }}
                           >
                             Pay During Pickup
                           </button>
                           <button
                             type='button'
                             className='btn btn-danger'
-                            onClick={() =>
+                            onClick={() => {
                               payment(
-                        
                                 cake.price,
                                 cake.name,
                                 nameRef.current.value,
                                 emailRef.current.value,
                                 phoneRef.current.value,
-                                
-                              )
-                            }
+                                true
+                              );
+                            }}
                           >
                             Pay Now
                           </button>
